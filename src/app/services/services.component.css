@@ -1,0 +1,10 @@
+.block-status{
+width: 200px;
+height: 200px;
+background-color: aquamarine;
+display: flex;
+float: left;
+margin-left: 100px;
+text-align: center;
+padding: 0px;
+}
