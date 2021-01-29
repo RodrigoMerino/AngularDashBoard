@@ -1,7 +1,7 @@
 export interface Server{
-ServerId:number,
-Name: string,
-IsOnline: boolean,
+serverId:number,
+name: string,
+isOnline: boolean,
 
 
 }

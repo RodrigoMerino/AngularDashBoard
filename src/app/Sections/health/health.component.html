@@ -2,7 +2,7 @@
 <h1>Health Container</h1>
 <div class="card-deck servers">   
 <div *ngFor="let server of servers">    
-    <app-services></app-services>
+    <app-services [serverInput] = 'server' (serverData) ='sendMessage($event)'></app-services>
 </div>
     
 </div>

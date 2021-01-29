@@ -1,8 +1,16 @@
-<div class="card mb-3 shadow block-status"> 
-  <div class="card-body">
-  <h5 class="card-title">Card title</h5>
-  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-<button>toggle status</button>
-</div>
+<div class="card mb-3 shadow block-status" 
+[ngStyle]="{'background-color': color}"> 
+  <div class="card-body body" >
+    
+  <div class="card-header">
+    {{serverInput.name}}
+        <div> 
+      </div>
+      <p class="card-body">
+        {{serverStatus}}    
+      </p>
+      <button (click) = "sendServerAction(serverInput.isOnline)">{{buttonText}}</button>
+    </div>
+  </div>
 </div>
    

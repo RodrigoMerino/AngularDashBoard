@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServicesComponent } from './services/services.component';
 import { HealthComponent } from './sections/health/health.component';
+import { CommonModule } from '@angular/common';
 
 //services
 import{ServicesService} from './ServerService/services.service'
@@ -18,7 +19,8 @@ import{ServicesService} from './ServerService/services.service'
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule
   ],
   providers: [
     ServicesService 
