@@ -19,17 +19,17 @@ servers: Server[];
 
 ngOnInit(): void {
   //me estoy suscribiendo al observable para poder llamarlo
-  this.refresData();
+ this.refresData();
   }
-  ngOnDestroy(){
-    if (this.timerSubscription) {
-      this.timerSubscription.unsubscribe();
-    }
-  }
+ ngOnDestroy(){
+if(this.subscribeToData)  
+this.timerSubscription.unsubscribe();
+ }
 refresData(){
   this._serverServices.GetServers().subscribe(res => {this.servers = res});
 
   this.subscribeToData();
+  
 }
 subscribeToData(){
   const time = timer(5000);

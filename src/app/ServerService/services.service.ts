@@ -6,7 +6,6 @@ import { catchError, retry } from 'rxjs/operators';
 import { Server } from '../Shared/Server';
 import { map } from 'rxjs/operators';
 import { ServerMessage } from '../Shared/ServerMessage';
-import { RequestOptions } from 'https';
 
 
 
@@ -41,6 +40,6 @@ return throwError(errMsg);
   }
   handleServerMessage(msg: ServerMessage): Observable<Response>{
     const url ='http://localhost:1713/api/server/' + msg.id;
-    return this.http.put(url,msg).pipe(map(res=> res as any)) 
+    return this.http.put(url,msg).pipe(map(res=> res as any));
   }
 }

@@ -46,7 +46,6 @@ console.log("working")
   
   sendServerAction(isOnline:boolean){
     this.makeLoading();
-
     //le pasamos el opuesto
 const payload = this.buildPayload(isOnline);
 this.serverData.emit(payload)
@@ -61,12 +60,12 @@ console.log("sending serve action",payload)
     if (isOnline) {
       return {
         id: this.serverInput.serverId,
-        payLoad:'deactivated'
+        PayLoad:'deactivated'
       };
     } else {
       return{
       id: this.serverInput.serverId,
-      payLoad:'activated'
+      PayLoad:'activated'
       };
     }
   }

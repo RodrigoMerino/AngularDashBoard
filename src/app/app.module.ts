@@ -9,12 +9,16 @@ import { HealthComponent } from './sections/health/health.component';
 import { CommonModule } from '@angular/common';
 
 //services
-import{ServicesService} from './ServerService/services.service'
+import{ServicesService} from './ServerService/services.service';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { SideBarComponent } from './side-bar/side-bar.component'
 @NgModule({
   declarations: [
     AppComponent,
     ServicesComponent,
-    HealthComponent
+    HealthComponent,
+    NavBarComponent,
+    SideBarComponent
   ],
   imports: [
     BrowserModule,
