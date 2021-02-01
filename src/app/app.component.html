@@ -6,9 +6,18 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+  <div class="row" id="mainContent">
 
-<div> 
-  <app-health></app-health>
+    <div class="col-sm-2" id="sideBar">
+      <app-side-bar></app-side-bar>
+
+    </div>
+    <div class="col-sm-9" id="dashBoard">
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+
 </div>
-
-<router-outlet></router-outlet>

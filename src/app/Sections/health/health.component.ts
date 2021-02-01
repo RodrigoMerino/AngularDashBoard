@@ -1,4 +1,3 @@
-import { SafeMethodCall } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import{Server} from  '../../Shared/Server';
 import{ServicesService} from '../../ServerService/services.service'
