@@ -8,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class PieChartComponent implements OnInit {
 
   constructor() { }
-
+public pieChartData: number[] =[132,314,500];
+public pieChartLabels: string[] =['McDonald','Pizza','Joans']
+public pieChartType: string ='doughnut';
   ngOnInit(): void {
   }
 

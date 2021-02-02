@@ -1,0 +1,18 @@
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+
+@Component({
+  selector: 'app-pagination',
+  templateUrl: './pagination.component.html',
+  styleUrls: ['./pagination.component.css']
+})
+export class PaginationComponent implements OnInit {
+
+  constructor() { }
+@Output() goPrev = new EventEmitter<boolean>();
+  ngOnInit(): void {
+  }
+
+  onPrev():void{
+    this.goPrev.emit(true);
+  }
+}

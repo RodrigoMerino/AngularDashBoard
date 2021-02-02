@@ -16,7 +16,8 @@ import { SalesComponent } from './Sections/sales/sales.component';
 import { OrdersComponent } from './Sections/orders/orders.component';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
-import { PieChartComponent } from './charts/pie-chart/pie-chart.component'
+import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
+import { PaginationComponent } from './pagination/pagination.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +29,8 @@ import { PieChartComponent } from './charts/pie-chart/pie-chart.component'
     OrdersComponent,
     BarChartComponent,
     LineChartComponent,
-    PieChartComponent
+    PieChartComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
