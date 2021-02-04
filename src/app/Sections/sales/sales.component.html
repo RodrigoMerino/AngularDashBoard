@@ -1,4 +1,5 @@
-<div class="fluid-container">   
+<div *ngIf="dataSource" >
+  <div class="fluid-container">   
     <table class="table table-dark tab">
     <thead>
       <tr>
@@ -9,19 +10,36 @@
         <th scope="col">Completed</th>
       </tr>
     </thead>
-      <tr *ngFor="let order of orders">
+      <tr *ngFor="let order of dataSource.data " >
         <td>{{order.orderId}}</td>
         <td>{{order.customerId}}</td>
         <td>{{order.total}}</td>
         <td>{{order.placed}}</td>
         <td>{{order.completed}}</td>
+
+
     </tr>
      
   </table>
-  <div>
+  
+<!-- using angular material -->
+
+<mat-table  [dataSource]="dataSource.data| ObjToArray " class="data">
+
+  <!-- <mat-header-row *matHeaderRowDef="columnsDisplayss"></mat-header-row> -->
+<mat-row  *matRowDef="let row; columns: columnsDisplay"></mat-row>
+
+<ng-container matColumnDef="orderId">
+  <mat-header-cell  *matHeaderCellDef> orderId</mat-header-cell>
+  <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
+</ng-container>
+</mat-table >
+</div>
+<div>
       <app-pagination
       (goPrev) ="goToPrevious()"
+      (goNext) ="goToNext()"
       >
       </app-pagination>
-  </div>
+</div>
 </div>

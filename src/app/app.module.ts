@@ -17,7 +17,11 @@ import { OrdersComponent } from './Sections/orders/orders.component';
 import { BarChartComponent } from './charts/bar-chart/bar-chart.component';
 import { LineChartComponent } from './charts/line-chart/line-chart.component';
 import { PieChartComponent } from './charts/pie-chart/pie-chart.component';
-import { PaginationComponent } from './pagination/pagination.component'
+import { PaginationComponent } from './pagination/pagination.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { ObjToArrayPipe } from './ObjToArray.pipe';
+import {MatTableModule} from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,14 +34,17 @@ import { PaginationComponent } from './pagination/pagination.component'
     BarChartComponent,
     LineChartComponent,
     PieChartComponent,
-    PaginationComponent
+    PaginationComponent,
+    ObjToArrayPipe,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     CommonModule,
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule,
+    MatTableModule
   ],
   providers: [
     ServicesService 

@@ -1,19 +1,33 @@
 import { Injectable } from '@angular/core';
-import{HttpClient} from '@angular/common/http'
+import{HttpClient, HttpParams} from '@angular/common/http'
 import { catchError, map } from 'rxjs/operators';
 import { Observable, throwError } from 'rxjs';
 import { Order } from '../Shared/Order';
+
+export interface orderData{
+ data: Order[],
+ meta:{
+totalCount:number
+ pageSize :number
+  currentPage :number
+    totalPages :number
+}
+};
+
 @Injectable({
   providedIn: 'root'
 })
-export class SalesDataServiceService {
 
+export class SalesDataServiceService {
   constructor(private http: HttpClient) { }
 
+GetOrders(currentPage:number,totalperPage ):Observable<orderData>{
+  
+  let params = new HttpParams();
+  params = params.append('PageNumber',String(currentPage));
+  params = params.append('PageSize',String(totalperPage));
 
-GetOrders(PageNumber:number,PageSize:number)/*Observable<Order[]>*/{
-
-return this.http.get('http://localhost:1713/api/Order/' + PageNumber + PageSize)
+return this.http.get<orderData[]>('http://localhost:1713/api/Order',{params} )
 .pipe(map(res => res as any),
 catchError(this.handleError))
 
