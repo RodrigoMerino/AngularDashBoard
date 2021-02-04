@@ -21,6 +21,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { ObjToArrayPipe } from './ObjToArray.pipe';
 import {MatTableModule} from '@angular/material/table';
+import { SalesDataServiceService } from './ApiServices/sales-data-service.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule
   ],
   providers: [
-    ServicesService 
+    ServicesService,
+    SalesDataServiceService
   ],
   bootstrap: [AppComponent]
 })
