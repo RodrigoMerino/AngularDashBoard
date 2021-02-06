@@ -18,9 +18,9 @@ export class OrdersComponent implements OnInit {
   this.getTopCustomers();
   }
 getStates(){
-  this._salesDataService.GetOrdersByState().subscribe(res => {console.log('from order component',this.salesDataByState = res)})
+  this._salesDataService.GetOrdersByState().subscribe(res => {this.salesDataByState = res})
 }
 getTopCustomers(){
-  this._salesDataService.GetOrdersByCustomer(5).subscribe(res => {console.log('from order component',this.salesDataByCustomer = res)})
+  this._salesDataService.GetOrdersByCustomer(5).subscribe(res => {this.salesDataByCustomer = res})
 }
 }

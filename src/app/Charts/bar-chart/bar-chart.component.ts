@@ -50,7 +50,7 @@ export class BarChartComponent implements OnInit {
       return placed;
     }, []);
 
-    console.log(formattedArray);
+    //console.log(formattedArray);
     //onsole.log(date);
 
     const p = [];
@@ -66,7 +66,7 @@ if (!p[key]) {
 // si no returno nada me da un error de push
 return r;
     },[]);
-    console.log(getTogetherCloneData);
+    //console.log(getTogetherCloneData);
   return getTogetherCloneData;
   }
 }
