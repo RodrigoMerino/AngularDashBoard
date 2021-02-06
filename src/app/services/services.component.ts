@@ -17,6 +17,7 @@ export class ServicesComponent implements OnInit {
 
   @Input() serverInput: Server;
 @Output() serverData = new EventEmitter<ServerMessage>();
+
   ngOnInit() {
     this.setServerStatus(this.serverInput.isOnline);
   }

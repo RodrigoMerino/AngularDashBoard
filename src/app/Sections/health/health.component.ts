@@ -34,6 +34,7 @@ subscribeToData(){
   const time = timer(5000);
   this.timerSubscription = time.subscribe(() => this.refresData());
 }
+
 sendMessage(msg: ServerMessage){
 this._serverServices.handleServerMessage(msg).subscribe(res => console.log(res),err => console.log(err))
 

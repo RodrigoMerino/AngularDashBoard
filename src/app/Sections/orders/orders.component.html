@@ -10,14 +10,14 @@
             </div>
             <div class="card shadow p-3 mb-5 bg-dark rounded">
                 <div class="card-body">
-                    <h4 class="card-title">Title</h4>
-                    <app-pie-chart></app-pie-chart>
+                    <h4 class="card-title">Orders By State</h4>
+                    <app-pie-chart *ngIf="salesDataByState" [InitData] = 'salesDataByState'  [Limit] = '3'></app-pie-chart>
                 </div>
             </div>
             <div class="card shadow p-3 mb-5 bg-dark rounded">
                 <div class="card-body">
                     <h4 class="card-title">Title</h4>
-                    <app-pie-chart></app-pie-chart>
+                    <app-pie-chart *ngIf="salesDataByCustomer"  [InitData] = 'salesDataByCustomer' [Limit] = '4'></app-pie-chart>
                 </div>
             </div>
 

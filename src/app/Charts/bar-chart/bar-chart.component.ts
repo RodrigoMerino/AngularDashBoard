@@ -33,11 +33,11 @@ export class BarChartComponent implements OnInit {
   }
 
   GetOrder() {
-    this._SalesService.GetOrders(1, 10).subscribe(res => {
+    this._SalesService.GetOrders(1, 100).subscribe(res => {
       const localChartData = this.getChartData(res as any);
       
       this.barChartLabels = localChartData.map(x => x[0]).sort();
-      this.barChartData = [{'data': localChartData.map(x=>x[1]),'label':'sales'}]
+      this.barChartData = [{'data': localChartData.map(x=>x[1]),'label':'sales'}];
     })
   }
 
